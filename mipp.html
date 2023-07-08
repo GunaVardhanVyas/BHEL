@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{background-color: #274060;align-items: center;}
+        table{border: solid; border-radius: 10px;align-items: center;}
+        td{background-color: #F6E8EA;}
+        td:nth-child(2n){background-color: #3F8EFC;}
+        input{text-align: center; align-self: center; ;}
+    </style>
+
+    <script>
+        const url="https://script.google.com/macros/s/AKfycbzx5mhsH5z-WawzvE7lIHxGMvdg5Nok0a7nr_EkzGj4iCAtD08PYak8m53zq31XSmNPUw/exec";
+        document.getElementById('form').onsubmit=url;
+    </script>
+</head>
+<body>
+    <form id="form" method="post">
+        <table>
+            <tr>
+                <td>PR No: </td>
+                <td><input type="text" class="med" /></td>
+                <td>Date: </td>
+                <td><input type="date" name="prdt" id="prdt"></td>
+                <td>PR estimate: </td>
+                <td><input type="number" name="PR Estimate" id="pr_est">(lacs)</td>
+                <td>AS-11 estimate: </td>
+                <td><input type="number" name="AS-11 Estimate" id="as_est">(lacs)</td>
+            </tr>    
+            <tr>
+                <td>Enquiry number: </td>
+                <td><input type="number" name="Enquiry number" id="eq_no"></td>
+                <td>Date: </td>
+                <td><input type="date" name="eqDt" id="eq_dt"></td>
+                <td>Tech scrutiny Receive Date: </td>
+                <td><input type="date" name="tect scrutiny recevive" id="techrecv" class="small"></td>
+                <td>Receive Date: </td>
+                <td><input type="date" name="tect scrutiny cleared" id="techclr" class="small"></td>
+                <td>Price Justification recv/cleared: </td>
+                <td><input type="date" name="Price Justification Recv" id="justrecv" class="small">/<input type="date" name="Price Justification Clear" id="justclr"></td>
+            </tr>
+            <tr>
+                <td>Vendor1: </td>
+                <td><input type="text" name="Vendor1" id="ven1"> <p>yes:
+                <input type="radio" name="yes1" id="yes1"></p></td>
+                <td>Vendor2: </td>
+                <td><input type="text" name="Vendor2" id="ven2">
+                   <p> yes:  <input type="radio" name="yes2" id="yes2"></p></td>
+                <td>Vendor3: </td>
+                <td><input type="text" name="Vendor3" id="ven3"><p> yes:
+                <input type="radio" name="yes3" id="yes3"></p></td>
+                <td>Vendor4: </td>
+                <td><input type="text" name="Vendor4" id="ven4"><p> yes:
+                <input type="radio" name="yes4" id="yes4"></p></td>
+            </tr>
+            <tr>
+                <td></td>
+
+                <td></td>
+                <td><input type="radio" name="yes2" id="yes2"></td>
+                <td></td>
+                <td><input type="radio" name="yes3" id="yes3"></td>
+                <td></td>
+                <td><input type="radio" name="yes4" id="yes4"></td>
+            </tr>
+            <tr>
+                <td>Draft PR Date: </td>
+                <td><input type="date" name="draft PR Dt" id="draft_dt"></td>
+                <td>Quality CHeckList:</td>
+                <td></td>
+                <td>Commercial Check List: </td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <td>PO number: </td>
+                <td><input type="number" name="PO No" id="po_no">,</td>
+                <td>Date: </td>
+                <td><input type="date" name="PO dt" id="po_dt"></td>
+                <td>Delivery Date: </td>
+                <td><input type="date" name="PO del Dt" id="del_dt"></td>
+
+            </tr>
+            <tr>
+                <td>Vendor Name: </td>
+                <td><input type="text" name="Vendor1" id="ven1">,</td>
+                <td>Contact: </td>
+                <td><input type="tel" name="vendor Contact" id="ven_conc"></td>
+                <td>mail: </td>
+                <td><input type="email" name="vendor mail" id="ven_mail"></td>
+            </tr>
+            <tr>
+                <td>Doc name: </td>
+                <td><input type="text" name="Doc name" id="doc_name"></td>
+                <td>Date: </td>
+                <td><input type="date" name="subDt" id="sub_dt"></td>
+                <td>PO value</td>
+                <td><input type="number" name="PO vlaue" id="po_val" class="small"></td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <td>RDR no.: </td>
+                <td><input type="number" name="RDR no" id="rdr_no"></td>
+                <td>Date: </td>
+                <td><input type="date" name="RDR Dt" id="rdr_dt"></td>
+                <td>LR No.: </td>
+                <td><input type="number" name="LR no" id="lr_no"></td>
+                <td>LR Date: </td>
+                <td><input type="date" name="LR Dt" id="lr_dt"></td>
+            </tr>
+            <tr>
+                <td>Dispatched: </td>
+                <td><input type="radio" name="Dispatched" id="disp"></td>
+                <td>Supplied items value: </td>
+                <td><input type="number" name="Supplied items Value" id="supp_val"></td>
+                <td>Balance value: </td>
+                <td><input type="number" name="Balance Value" id="bal_val"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

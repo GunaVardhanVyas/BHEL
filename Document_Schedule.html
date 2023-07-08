@@ -1,0 +1,125 @@
+<html>
+	<head>
+		<link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+        crossorigin="anonymous" 
+    />
+		<style>
+			body{background-color: #274060;}
+			table{font-size:35px;}
+			input{width:300px;height:30px;text-align:center}
+			button{width:100px;height:30px;}
+			select{width:200px;height:30px;}
+			
+			td {
+            			background-color: #F6E8EA;
+        		}
+        
+    	td:nth-child(2n) {
+            			background-color: #3F8EFC;
+				width :300px;
+        		}
+			button{height:50px}
+			.res{height:50px;width:200px}
+		</style>
+	</head>
+
+	<body> 
+	<center>
+	<form
+		id = "form"
+		method = "POST"
+	>
+		<table>
+			<tr>
+				<td><label for="title">Document_Title ::</label></td>
+				<td colspan=2><center>
+					<input 
+							type = "text" 
+							id = "title"
+							class = "mx-3 form-control"
+							name = "Document_Title"
+							list = "titles"
+					/></center>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="num">Document_Number ::</label></td>
+				<td colspan=2><center>
+					<input 
+						type="text" 
+						id="num" 
+						class = "mx-3 form-control"
+						name = "Document_Number"
+						list = "numbers"
+					/></center>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="rev">Current_Revision ::</label></td>
+				<td colspan=2><center>
+					<select 
+						name="Current_revision" 
+						id="rev" placeholder="Revision_No." 
+						class = "mx-3 form-control" 
+						style="height:50px ; text-align:center"
+					>
+						<option value="REV 01">REV 01</option>
+						<option value="REV 02">REV 02</option>
+						<option value="REV 03">REV 03</option>
+						<option value="FINAL">FINAL</option>
+					</select>
+					</center>
+				</td>
+			</tr>
+			<tr>
+				<td>Sub_Date ::</td>
+				<td colspan=2><center>
+					<input 
+						type="date" 
+						style = "font-size:16px; text-align:center"
+						id="sub"
+						class = "mx-3 form-control"
+						name = "Sub_Date"
+					/></center>
+				</td>
+			</tr>
+			<tr>
+				<td>Remarks ::</td>
+				<td colspan=2><center>
+					<input 
+						type="text" 
+						class = "mx-3 form-control"
+						id="rmrk"
+						name = "Remarks"
+					/>
+					</center>
+				</td>
+			</tr>
+		</table>
+		<button
+			type = "SUBMIT"
+			class = "btn btn-primary"
+		>Save</button> <button onclick="" class="btn btn-primary">Delete</button> <input class="res" type="Reset" placeholder="Reset" class="btn btn-primary"/>
+	</form>	
+	</center>
+
+	<script>
+		const url= "";
+		document.getElementById('form').action = url;
+	</script>
+		<!---<script>
+        		fetchhttps://script.google.com/macros/s/AKfycbydel4S0op9XmzVcwUSxmUTxhvfwNqMQyO2LTujfRpHYKOUxPVrQ3gwLlCv0JqdpBez/exec
+            		.then(res => res.json())
+            		.then(data => {
+                	let tr = data.content.reduce((prev, cur) => {
+                	    let td = cur.map(e => `<td>${e}</td>`)
+                	    return prev + `<tr>${td.join("")}</tr>`
+               		 }, "\r")
+                	document.querySelector("table").innerHTML = tr;
+            		});
+    		</script>--->
+	</body>
+</html>	
